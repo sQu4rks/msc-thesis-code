@@ -18,6 +18,7 @@ HEADS_DIR = os.path.join(os.path.dirname(__file__), "..", "heads")
 # Flower ClientApp
 app = ClientApp()
 
+
 @app.train()
 def train(msg: Message, context: Context):
     partition_id = context.node_config["partition-id"]
@@ -39,7 +40,7 @@ def train(msg: Message, context: Context):
                 current_state[k] = v
         model.load_state_dict(current_state)
 
-    device = torch.device("cpu")
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     model.to(device)
 
     # Load data
@@ -85,7 +86,7 @@ def evaluate(msg: Message, context: Context):
     server_state_dict = msg.content["arrays"].to_torch_state_dict()
     model.load_backbone_state_dict(server_state_dict)
 
-    # Restore local head
+    # Restore head
     if "head_state" in context.state:
         head_state = context.state["head_state"].to_torch_state_dict()
         current_state = model.state_dict()
@@ -94,23 +95,23 @@ def evaluate(msg: Message, context: Context):
                 current_state[k] = v
         model.load_state_dict(current_state)
 
-    device = torch.device("cpu")
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     model.to(device)
 
     batch_size = context.run_config["batch-size"]
     _, valloader = load_data(partition_id, batch_size)
 
     # Evaluate
-    eval_local_loss, eval_kl_loss = test_fn(model, valloader, device, node_name=node_name)
+    eval_linkutil_loss, eval_kl_loss = test_fn(model, valloader, device, node_name=node_name)
 
-    # Save head to disk 
+    # Save head to disk
     os.makedirs(HEADS_DIR, exist_ok=True)
     head_state_dict = {k: v.cpu() for k, v in model.state_dict().items() if k.startswith('head.')}
     head_path = os.path.join(HEADS_DIR, f"{node_name}_head.pt")
     torch.save(head_state_dict, head_path)
 
     metrics = {
-        "eval_local_loss": eval_local_loss,
+        "eval_linkutil_loss": eval_linkutil_loss,
         "eval_kl_loss": eval_kl_loss,
         "num-examples": len(valloader.dataset),
     }

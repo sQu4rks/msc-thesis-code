@@ -29,13 +29,13 @@ for all available options.
 For each of the federated models it is easiest to use the flower cli to run them. Each directory prefixed with "federated-"
 contains one of the four experiments. 
 
-Navigate into the folder and create a venv for this specific experiment with 
+Navigate into the folder (i.e. federated-oracle) and create a venv for this specific experiment with 
 
 > uv venv --python 3.13 
 
 and install the dependencies
 
-> uv pip install "flwr[simulation] torch numpy"
+> uv pip install "flwr[simulation]" torch numpy
 
 and run the training of the model with 
 
@@ -43,4 +43,11 @@ and run the training of the model with
 
 Note: The pinning to python version 3.13 worked to get around an import error with ray (see https://github.com/adap/flower/issues/5512).
 
-5. Use the evaluation script to evaluate the different models 
+5. Use the evaluation script to evaluate the different models
+
+Navigate to the core directory and run the evaluation script with
+
+> uv run evaluate_offline.py --data-dir ../data/training_data --centralized-model <path to checkpoint> --federated-dir ../federated-oracle --federated-local-dir ../federated-local --federated-neighbor-dir ../federated-neighbor --federated-linkutil-dir ../federated-linkutil
+
+- ECMP and Oracle baselines are always computed
+- The federated models are optional. Toggle them by including their respective data dir argument (i.e. --federated-local-dir for the federated-local model)
