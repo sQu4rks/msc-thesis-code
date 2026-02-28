@@ -1,0 +1,12 @@
+[project]
+name = "code"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "flwr[simulation]>=1.26.1",
+    "numpy>=1.26.0",
+    "scipy>=1.17.1",
+    "torch>=2.10.0",
+]
