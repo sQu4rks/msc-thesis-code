@@ -1,0 +1,46 @@
+[project]
+name = "te-federated-neighbor"
+version = "0.1.0"
+description = "TE Federated Learning with Neighbor Feedback"
+license = "Apache-2.0"
+dependencies = [
+    "flwr[simulation]>=1.24.0",
+    "torch==2.8.0",
+    "numpy>=1.24.0",
+]
+
+[tool.flwr.app]
+publisher = "TE Research"
+
+[tool.flwr.app.components]
+serverapp = "tefl.server_app:app"
+clientapp = "tefl.client_app:app"
+
+[tool.flwr.app.config]
+num-server-rounds = 10
+fraction-evaluate = 1.0
+local-epochs = 3
+learning-rate = 0.001
+batch-size = 32
+
+
+#######################################################################
+# CONFIGURATION MIGRATION NOTICE:
+#
+# What was previously called "federation config" for SuperLink
+# connections in pyproject.toml has been renamed and moved.
+#
+# These settings are now **SuperLink connection configuration**
+# and are defined in the Flower configuration file.
+#
+# The entries below are commented out intentionally and are kept
+# only as a migration reference.
+#
+# Docs: https://flower.ai/docs/framework/ref-flower-configuration.html
+#######################################################################
+
+# [tool.flwr.federations]
+# default = "local-simulation"
+
+# [tool.flwr.federations.local-simulation]
+# options.num-supernodes = 11
