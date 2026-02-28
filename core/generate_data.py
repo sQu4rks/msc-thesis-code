@@ -35,6 +35,7 @@ class NetworkGraph:
             self.link_delay[(dst, src)] = delay
 
     def k_shortest_paths(self, src, dst, k=4):
+        # Based on pseudo code in https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm and https://gist.github.com/kachayev/5990802
         def dijkstra(source, target, excluded_edges=set(), excluded_nodes=set()):
             dist = {source: 0}
             prev = {source: None}
