@@ -1,0 +1,18 @@
+{
+  "node": "KSCY",
+  "node_idx": 4,
+  "history_length": 12,
+  "num_destinations": 10,
+  "other_nodes": [
+    "SEAT",
+    "SNVA",
+    "LOSA",
+    "DENV",
+    "HOUS",
+    "CHIN",
+    "IPLS",
+    "ATLA",
+    "WASH",
+    "NYCM"
+  ]
+}

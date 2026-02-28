@@ -1,0 +1,583 @@
+{
+  "num_samples": 2004,
+  "input_shape": [
+    2004,
+    12,
+    11,
+    11
+  ],
+  "output_shape": [
+    2004,
+    378
+  ],
+  "history_length": 12,
+  "k_paths": 4,
+  "num_nodes": 11,
+  "node_list": [
+    "SEAT",
+    "SNVA",
+    "LOSA",
+    "DENV",
+    "KSCY",
+    "HOUS",
+    "CHIN",
+    "IPLS",
+    "ATLA",
+    "WASH",
+    "NYCM"
+  ],
+  "tunnel_pairs": [
+    [
+      "ATLA",
+      "CHIN"
+    ],
+    [
+      "ATLA",
+      "DENV"
+    ],
+    [
+      "ATLA",
+      "HOUS"
+    ],
+    [
+      "ATLA",
+      "IPLS"
+    ],
+    [
+      "ATLA",
+      "KSCY"
+    ],
+    [
+      "ATLA",
+      "LOSA"
+    ],
+    [
+      "ATLA",
+      "NYCM"
+    ],
+    [
+      "ATLA",
+      "SEAT"
+    ],
+    [
+      "ATLA",
+      "SNVA"
+    ],
+    [
+      "ATLA",
+      "WASH"
+    ],
+    [
+      "CHIN",
+      "ATLA"
+    ],
+    [
+      "CHIN",
+      "DENV"
+    ],
+    [
+      "CHIN",
+      "HOUS"
+    ],
+    [
+      "CHIN",
+      "IPLS"
+    ],
+    [
+      "CHIN",
+      "KSCY"
+    ],
+    [
+      "CHIN",
+      "LOSA"
+    ],
+    [
+      "CHIN",
+      "NYCM"
+    ],
+    [
+      "CHIN",
+      "SEAT"
+    ],
+    [
+      "CHIN",
+      "SNVA"
+    ],
+    [
+      "CHIN",
+      "WASH"
+    ],
+    [
+      "DENV",
+      "ATLA"
+    ],
+    [
+      "DENV",
+      "CHIN"
+    ],
+    [
+      "DENV",
+      "HOUS"
+    ],
+    [
+      "DENV",
+      "IPLS"
+    ],
+    [
+      "DENV",
+      "KSCY"
+    ],
+    [
+      "DENV",
+      "LOSA"
+    ],
+    [
+      "DENV",
+      "NYCM"
+    ],
+    [
+      "DENV",
+      "SEAT"
+    ],
+    [
+      "DENV",
+      "SNVA"
+    ],
+    [
+      "DENV",
+      "WASH"
+    ],
+    [
+      "HOUS",
+      "ATLA"
+    ],
+    [
+      "HOUS",
+      "CHIN"
+    ],
+    [
+      "HOUS",
+      "DENV"
+    ],
+    [
+      "HOUS",
+      "IPLS"
+    ],
+    [
+      "HOUS",
+      "KSCY"
+    ],
+    [
+      "HOUS",
+      "LOSA"
+    ],
+    [
+      "HOUS",
+      "NYCM"
+    ],
+    [
+      "HOUS",
+      "SEAT"
+    ],
+    [
+      "HOUS",
+      "SNVA"
+    ],
+    [
+      "HOUS",
+      "WASH"
+    ],
+    [
+      "IPLS",
+      "ATLA"
+    ],
+    [
+      "IPLS",
+      "CHIN"
+    ],
+    [
+      "IPLS",
+      "DENV"
+    ],
+    [
+      "IPLS",
+      "HOUS"
+    ],
+    [
+      "IPLS",
+      "KSCY"
+    ],
+    [
+      "IPLS",
+      "LOSA"
+    ],
+    [
+      "IPLS",
+      "NYCM"
+    ],
+    [
+      "IPLS",
+      "SEAT"
+    ],
+    [
+      "IPLS",
+      "SNVA"
+    ],
+    [
+      "IPLS",
+      "WASH"
+    ],
+    [
+      "KSCY",
+      "ATLA"
+    ],
+    [
+      "KSCY",
+      "CHIN"
+    ],
+    [
+      "KSCY",
+      "DENV"
+    ],
+    [
+      "KSCY",
+      "HOUS"
+    ],
+    [
+      "KSCY",
+      "IPLS"
+    ],
+    [
+      "KSCY",
+      "LOSA"
+    ],
+    [
+      "KSCY",
+      "NYCM"
+    ],
+    [
+      "KSCY",
+      "SEAT"
+    ],
+    [
+      "KSCY",
+      "SNVA"
+    ],
+    [
+      "KSCY",
+      "WASH"
+    ],
+    [
+      "LOSA",
+      "ATLA"
+    ],
+    [
+      "LOSA",
+      "CHIN"
+    ],
+    [
+      "LOSA",
+      "DENV"
+    ],
+    [
+      "LOSA",
+      "HOUS"
+    ],
+    [
+      "LOSA",
+      "IPLS"
+    ],
+    [
+      "LOSA",
+      "KSCY"
+    ],
+    [
+      "LOSA",
+      "NYCM"
+    ],
+    [
+      "LOSA",
+      "SEAT"
+    ],
+    [
+      "LOSA",
+      "SNVA"
+    ],
+    [
+      "LOSA",
+      "WASH"
+    ],
+    [
+      "NYCM",
+      "ATLA"
+    ],
+    [
+      "NYCM",
+      "CHIN"
+    ],
+    [
+      "NYCM",
+      "DENV"
+    ],
+    [
+      "NYCM",
+      "HOUS"
+    ],
+    [
+      "NYCM",
+      "IPLS"
+    ],
+    [
+      "NYCM",
+      "KSCY"
+    ],
+    [
+      "NYCM",
+      "LOSA"
+    ],
+    [
+      "NYCM",
+      "SEAT"
+    ],
+    [
+      "NYCM",
+      "SNVA"
+    ],
+    [
+      "NYCM",
+      "WASH"
+    ],
+    [
+      "SEAT",
+      "ATLA"
+    ],
+    [
+      "SEAT",
+      "CHIN"
+    ],
+    [
+      "SEAT",
+      "DENV"
+    ],
+    [
+      "SEAT",
+      "HOUS"
+    ],
+    [
+      "SEAT",
+      "IPLS"
+    ],
+    [
+      "SEAT",
+      "KSCY"
+    ],
+    [
+      "SEAT",
+      "LOSA"
+    ],
+    [
+      "SEAT",
+      "NYCM"
+    ],
+    [
+      "SEAT",
+      "SNVA"
+    ],
+    [
+      "SEAT",
+      "WASH"
+    ],
+    [
+      "SNVA",
+      "ATLA"
+    ],
+    [
+      "SNVA",
+      "CHIN"
+    ],
+    [
+      "SNVA",
+      "DENV"
+    ],
+    [
+      "SNVA",
+      "HOUS"
+    ],
+    [
+      "SNVA",
+      "IPLS"
+    ],
+    [
+      "SNVA",
+      "KSCY"
+    ],
+    [
+      "SNVA",
+      "LOSA"
+    ],
+    [
+      "SNVA",
+      "NYCM"
+    ],
+    [
+      "SNVA",
+      "SEAT"
+    ],
+    [
+      "SNVA",
+      "WASH"
+    ],
+    [
+      "WASH",
+      "ATLA"
+    ],
+    [
+      "WASH",
+      "CHIN"
+    ],
+    [
+      "WASH",
+      "DENV"
+    ],
+    [
+      "WASH",
+      "HOUS"
+    ],
+    [
+      "WASH",
+      "IPLS"
+    ],
+    [
+      "WASH",
+      "KSCY"
+    ],
+    [
+      "WASH",
+      "LOSA"
+    ],
+    [
+      "WASH",
+      "NYCM"
+    ],
+    [
+      "WASH",
+      "SEAT"
+    ],
+    [
+      "WASH",
+      "SNVA"
+    ]
+  ],
+  "tunnels_per_pair": {
+    "SEAT->SNVA": 3,
+    "SEAT->LOSA": 4,
+    "SEAT->DENV": 3,
+    "SEAT->KSCY": 4,
+    "SEAT->HOUS": 4,
+    "SEAT->CHIN": 4,
+    "SEAT->IPLS": 4,
+    "SEAT->ATLA": 4,
+    "SEAT->WASH": 4,
+    "SEAT->NYCM": 4,
+    "SNVA->SEAT": 3,
+    "SNVA->LOSA": 3,
+    "SNVA->DENV": 3,
+    "SNVA->KSCY": 3,
+    "SNVA->HOUS": 3,
+    "SNVA->CHIN": 4,
+    "SNVA->IPLS": 3,
+    "SNVA->ATLA": 4,
+    "SNVA->WASH": 4,
+    "SNVA->NYCM": 4,
+    "LOSA->SEAT": 4,
+    "LOSA->SNVA": 3,
+    "LOSA->DENV": 3,
+    "LOSA->KSCY": 3,
+    "LOSA->HOUS": 3,
+    "LOSA->CHIN": 4,
+    "LOSA->IPLS": 3,
+    "LOSA->ATLA": 4,
+    "LOSA->WASH": 4,
+    "LOSA->NYCM": 4,
+    "DENV->SEAT": 3,
+    "DENV->SNVA": 3,
+    "DENV->LOSA": 3,
+    "DENV->KSCY": 3,
+    "DENV->HOUS": 3,
+    "DENV->CHIN": 4,
+    "DENV->IPLS": 3,
+    "DENV->ATLA": 4,
+    "DENV->WASH": 4,
+    "DENV->NYCM": 4,
+    "KSCY->SEAT": 4,
+    "KSCY->SNVA": 3,
+    "KSCY->LOSA": 3,
+    "KSCY->DENV": 3,
+    "KSCY->HOUS": 3,
+    "KSCY->CHIN": 3,
+    "KSCY->IPLS": 1,
+    "KSCY->ATLA": 3,
+    "KSCY->WASH": 3,
+    "KSCY->NYCM": 3,
+    "HOUS->SEAT": 4,
+    "HOUS->SNVA": 3,
+    "HOUS->LOSA": 3,
+    "HOUS->DENV": 3,
+    "HOUS->KSCY": 3,
+    "HOUS->CHIN": 4,
+    "HOUS->IPLS": 3,
+    "HOUS->ATLA": 4,
+    "HOUS->WASH": 4,
+    "HOUS->NYCM": 4,
+    "CHIN->SEAT": 4,
+    "CHIN->SNVA": 4,
+    "CHIN->LOSA": 4,
+    "CHIN->DENV": 4,
+    "CHIN->KSCY": 3,
+    "CHIN->HOUS": 4,
+    "CHIN->IPLS": 3,
+    "CHIN->ATLA": 4,
+    "CHIN->WASH": 3,
+    "CHIN->NYCM": 3,
+    "IPLS->SEAT": 4,
+    "IPLS->SNVA": 3,
+    "IPLS->LOSA": 3,
+    "IPLS->DENV": 3,
+    "IPLS->KSCY": 1,
+    "IPLS->HOUS": 3,
+    "IPLS->CHIN": 3,
+    "IPLS->ATLA": 3,
+    "IPLS->WASH": 3,
+    "IPLS->NYCM": 3,
+    "ATLA->SEAT": 4,
+    "ATLA->SNVA": 4,
+    "ATLA->LOSA": 4,
+    "ATLA->DENV": 4,
+    "ATLA->KSCY": 3,
+    "ATLA->HOUS": 4,
+    "ATLA->CHIN": 4,
+    "ATLA->IPLS": 3,
+    "ATLA->WASH": 3,
+    "ATLA->NYCM": 4,
+    "WASH->SEAT": 4,
+    "WASH->SNVA": 4,
+    "WASH->LOSA": 4,
+    "WASH->DENV": 4,
+    "WASH->KSCY": 3,
+    "WASH->HOUS": 4,
+    "WASH->CHIN": 3,
+    "WASH->IPLS": 3,
+    "WASH->ATLA": 3,
+    "WASH->NYCM": 3,
+    "NYCM->SEAT": 4,
+    "NYCM->SNVA": 4,
+    "NYCM->LOSA": 4,
+    "NYCM->DENV": 4,
+    "NYCM->KSCY": 3,
+    "NYCM->HOUS": 4,
+    "NYCM->CHIN": 3,
+    "NYCM->IPLS": 3,
+    "NYCM->ATLA": 4,
+    "NYCM->WASH": 3
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "node": "ATLA",
+  "node_idx": 8,
+  "history_length": 12,
+  "num_destinations": 10,
+  "other_nodes": [
+    "SEAT",
+    "SNVA",
+    "LOSA",
+    "DENV",
+    "KSCY",
+    "HOUS",
+    "CHIN",
+    "IPLS",
+    "WASH",
+    "NYCM"
+  ]
+}

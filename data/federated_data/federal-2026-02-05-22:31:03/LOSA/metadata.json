@@ -1,0 +1,18 @@
+{
+  "node": "LOSA",
+  "node_idx": 2,
+  "history_length": 12,
+  "num_destinations": 10,
+  "other_nodes": [
+    "SEAT",
+    "SNVA",
+    "DENV",
+    "KSCY",
+    "HOUS",
+    "CHIN",
+    "IPLS",
+    "ATLA",
+    "WASH",
+    "NYCM"
+  ]
+}
