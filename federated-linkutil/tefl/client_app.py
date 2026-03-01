@@ -40,7 +40,7 @@ def train(msg: Message, context: Context):
                 current_state[k] = v
         model.load_state_dict(current_state)
 
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cpu")
     model.to(device)
 
     # Load data
@@ -95,7 +95,7 @@ def evaluate(msg: Message, context: Context):
                 current_state[k] = v
         model.load_state_dict(current_state)
 
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cpu")
     model.to(device)
 
     batch_size = context.run_config["batch-size"]
