@@ -488,7 +488,7 @@ def evaluate_all(args):
                                             central_ratios_list, tunnels)
         results["centralized"] = central_metrics
 
-    # 5. Federated model inference
+    # Federated model inference
     if args.federated_dir:
         print(f"Evaluating Federated model ({args.federated_dir})")
         fed_models, fed_input_size = load_federated_models(args.federated_dir)
@@ -503,7 +503,7 @@ def evaluate_all(args):
                                         fed_ratios_list, tunnels)
         results["federated"] = fed_metrics
 
-    # 6. Federated model with local loss
+    # Federated model with local loss
     if args.federated_local_dir:
         print(f"Evaluating Federated-Local model ({args.federated_local_dir})")
         fed_local_models, _ = load_federated_models(args.federated_local_dir)
@@ -518,7 +518,7 @@ def evaluate_all(args):
                                               fed_local_ratios_list, tunnels)
         results["federated_local"] = fed_local_metrics
 
-    # 7. Federated model with neighbor feedback
+    # Federated model with neighbor feedback
     if args.federated_neighbor_dir:
         print(f"Evaluating Federated-Neighbor model ({args.federated_neighbor_dir})")
         fed_neighbor_models, neighbor_input_size = load_federated_models(args.federated_neighbor_dir)
@@ -536,7 +536,7 @@ def evaluate_all(args):
                                                  fed_neighbor_ratios_list, tunnels)
         results["federated_neighbor"] = fed_neighbor_metrics
 
-    # 8. Federated model with link utilization feedback
+    # Federated model with link utilization feedback
     if args.federated_linkutil_dir:
         print(f"Evaluating Federated-LinkUtil model ({args.federated_linkutil_dir})")
         fed_linkutil_models, linkutil_input_size = load_federated_models(args.federated_linkutil_dir)
