@@ -2,7 +2,7 @@ To redo an experiment you have to install some dependencies - there is a pyproje
 that installs the required dependencies. Navigate to the code directory and run uv sync to setup a new environment with the 
 dependencies. 
 
-This has been tested only under Mac OS X 15.7.3 with uv 
+This has been tested only under Mac OS X 15.7.3 with uv version 0.6.14.
 
 1. Run the generate_data.py file. The easiest way to run it is using uv and then
 
