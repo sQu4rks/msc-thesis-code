@@ -48,6 +48,7 @@ and install the dependencies
 
 and run the training of the model with 
 
+```bash
 > source .venv/bin/activate && flwr run . local-simulation
 ```
 
