@@ -311,8 +311,8 @@ class TrainingDataFormatter:
         H = len(demand_history)
 
         # Input: local view of demands
-        outgoing = np.zeros((H, NUM_NODES - 1))  # Traffic from this to others
-        incoming = np.zeros((H, NUM_NODES - 1))  # Traffic from others to this
+        outgoing = np.zeros((H, NUM_NODES - 1))  # Traffic from one node to other nodes
+        incoming = np.zeros((H, NUM_NODES - 1))  # Traffic from other nodes to this node
 
         for t, dm in enumerate(demand_history):
             for j, other in enumerate(other_nodes):

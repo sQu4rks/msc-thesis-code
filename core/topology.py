@@ -1,3 +1,4 @@
+# four_letter_code: (name, longitude, latitude)
 NODES = {
     "SEAT": ("Seattle",        -122.33, 47.61),
     "SNVA": ("Sunnyvale",      -122.04, 37.37),
@@ -12,6 +13,7 @@ NODES = {
     "NYCM": ("New York",        -74.01, 40.71),
 }
 
+# (src, dst, edge weight, capacity)
 LINKS = [
     ("SEAT", "SNVA",  7.8,  2000),  
     ("SEAT", "DENV",  9.5,   200), 
